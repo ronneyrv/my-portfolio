@@ -16,13 +16,40 @@ function NavBar() {
       <AppBar position="fixed">
         <StyledToolbar>
           <Link to="hero-section" smooth={true} duration={800}>
-            <MenuItem>Home</MenuItem>
+            <MenuItem
+              sx={{
+                width: "150%",
+                borderRadius: "20px",
+                justifyContent: "center",
+                color: "#A9A9A9",
+              }}
+            >
+              Home
+            </MenuItem>
           </Link>
           <Link to="skills-section" smooth={true} duration={800}>
-            <MenuItem>Skills</MenuItem>
+            <MenuItem
+              sx={{
+                width: "150%",
+                borderRadius: "20px",
+                justifyContent: "center",
+                color: "#A9A9A9",
+              }}
+            >
+              Skills
+            </MenuItem>
           </Link>
           <Link to="projetcts-section" smooth={true} duration={800}>
-            <MenuItem>Projects</MenuItem>
+            <MenuItem
+              sx={{
+                width: "150%",
+                borderRadius: "20px",
+                justifyContent: "center",
+                color: "#A9A9A9",
+              }}
+            >
+              Projects
+            </MenuItem>
           </Link>
         </StyledToolbar>
       </AppBar>
