@@ -1,6 +1,12 @@
-import { Button, Container, Grid, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  styled,
+  Typography,
+} from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.jpg";
-import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 
 function Hero() {
@@ -12,62 +18,59 @@ function Hero() {
   }));
 
   const StyledImg = styled("img")(() => ({
-    width: "100%",
+    width: "80%",
     borderRadius: "50%",
     border: "2px solid #A9A9A9",
   }));
 
   return (
     <>
-      <StyledHero>
+      <StyledHero id="hero-section">
         <Container maxWidth="lg">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} display="flex" justifyContent="center">
               <StyledImg src={Avatar} />
             </Grid>
-            <Grid item xs={12} md={7}>
-              <Typography color="primary" variant="h1" textAlign="center">
-                Ronney Rocha
-              </Typography>
-              <Typography
-                color="primary"
-                variant="h2"
-                textAlign="center"
-                sx={{ mb: 2 }}
-              >
-                I'm a full stack developer
-              </Typography>
-              <Grid
-                container
-                display="flex"
-                justifyContent="center"
-                spacing={2}
-              >
+            <Grid item xs={12} md={7} display="flex" alignItems="center">
+              <Box>
+                <Typography color="primary" variant="h1" textAlign="center">
+                  Ronney Rocha
+                </Typography>
+                <Typography
+                  color="primary"
+                  variant="h2"
+                  textAlign="center"
+                  sx={{ mb: 2 }}
+                >
+                  I'm a full stack developer
+                </Typography>
                 <Grid
-                  item
-                  xs={12}
-                  md={4}
+                  container
                   display="flex"
                   justifyContent="center"
+                  spacing={2}
                 >
-                  <Button variant="outlined" fullWidth sx={{ gap: 1 }}>
-                    {<DownloadIcon />}
-                    <Typography>Download CV</Typography>
-                  </Button>
+                  <Grid
+                    item
+                    xs={12}
+                    md={4}
+                    display="flex"
+                    justifyContent="center"
+                  >
+                    <Button
+                      variant="outlined"
+                      fullWidth
+                      sx={{ gap: 1 }}
+                      onClick={function () {
+                        console.log("tell");
+                      }}
+                    >
+                      {<EmailIcon />}
+                      <Typography>Contact me</Typography>
+                    </Button>
+                  </Grid>
                 </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  md={4}
-                  display="flex"
-                  justifyContent="center"
-                >
-                  <Button variant="outlined" fullWidth sx={{ gap: 1 }}>
-                    {<EmailIcon />}
-                    <Typography>Contact me</Typography>
-                  </Button>
-                </Grid>
-              </Grid>
+              </Box>
             </Grid>
           </Grid>
         </Container>
