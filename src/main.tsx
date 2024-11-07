@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import App from "./App.tsx";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme.ts";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
