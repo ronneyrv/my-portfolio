@@ -35,6 +35,18 @@ function Skills() {
                 negócios. Hoje, sinto-me ainda mais motivado a explorar,
                 aprender e inovar como desenvolvedor Full Stack."
               </Typography>
+              <Box display="flex" gap="2px">
+                <Typography>HTML</Typography>
+                <Typography>CSS</Typography>
+                <Typography>JavaScrip</Typography>
+                <Typography>PHP</Typography>
+                <Typography>React</Typography>
+                <Typography>Typescript</Typography>
+                <Typography>Tailwind</Typography>
+                <Typography>Bootstap</Typography>
+                <Typography>Git</Typography>
+                <Typography>GitHub</Typography>
+              </Box>
               <Grid container display="flex" justifyContent="left" spacing={2}>
                 <Grid
                   item
